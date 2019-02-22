@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/hunly/web2.0#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
