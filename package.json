@@ -1,0 +1,22 @@
+{
+  "name": "lottery",
+  "version": "1.0.0",
+  "description": "Lottery blockchain web2.0 to web3.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunly/web2.0.git"
+  },
+  "author": "Hunly Chheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunly/web2.0/issues"
+  },
+  "homepage": "https://github.com/hunly/web2.0#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
