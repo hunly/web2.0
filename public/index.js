@@ -24,14 +24,14 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        <h1>LOTTERY APPLICATION WEB 2.0</h1>
+        <h1>Crypodia Payment Gateway 1.0</h1>
         <div>
-          <p>Total Lottery Amount is {this.state.total_amount}</p>
+          <p>Total Money Amount is {this.state.total_amount}</p>
         </div>
         <form onSubmit={this.onSubmit}>
-          <input placeholder="amount" value = {this.state.amount}
+          <input placeholder="Amount" value = {this.state.amount}
             onChange = {event=> this.setState({amount : event.target.value})} />
-          <input placeholder="email" value = {this.state.email}
+          <input placeholder="Email" value = {this.state.email}
             onChange = {event=> this.setState({email : event.target.value})}/>
           <button type="submit" >Paticipate</button>
         </form>

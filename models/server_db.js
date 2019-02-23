@@ -1,8 +1,8 @@
 var db = require('../db.js');
 save_user_information = (data) => new Promise((resolve, reject)=>{
-  db.query('INSERT INTO lottery_information SET ?', data, function(err, results, fields) {
+  db.query('INSERT INTO crypodia_gateway SET ?', data, function(err, results, fields) {
     if(err) {
-      reject('Could not insert into lottery_information');
+      reject('Could not insert into crypodia_gateway');
     }
     resolve('Successful');
   });
@@ -10,7 +10,7 @@ save_user_information = (data) => new Promise((resolve, reject)=>{
 
 var db = require('../db.js');
 get_total_amount = (data) => new Promise((resolve, reject)=>{
-  db.query('select sum(amount) as total_amount from lottery_information', null, function(err, results, fields) {
+  db.query('select sum(amount) as total_amount from crypodia_gateway', null, function(err, results, fields) {
     if(err) {
       reject('Could not get total amount');
     }

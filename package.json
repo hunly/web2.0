@@ -1,7 +1,7 @@
 {
-  "name": "lottery",
+  "name": "crypodia",
   "version": "1.0.0",
-  "description": "Lottery blockchain web2.0 to web3.0",
+  "description": "Crypodia Payment Gateway 1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +20,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "mysql": "^2.16.0",
+    "paypal-rest-sdk": "^1.8.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
