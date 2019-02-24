@@ -27,7 +27,17 @@ get_list_of_participants = (data) => new Promise((resolve, reject) => {
   });
 });
 
+delete_users = (data) => new Promise((resolve, reject) => {
+  db.query('delete from crypodia_gateway where ID > 0', null, function (err, results, fields) {
+    if (err) {
+      reject('Could not delete all users');
+    }
+    resolve('deleted all users successfully');
+  });
+});
+
 module.exports = {
   save_user_information,
   get_list_of_participants,
+  delete_users
 }
