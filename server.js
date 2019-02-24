@@ -89,7 +89,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
 
 });
 
-app.get('/success',(req,res) =>{
+app.get('/success', async (req,res) =>{
   const payerId = req.query.PayerID;
   const paymentId = req.query.paymentId;
   var execute_payment_json = {
@@ -109,6 +109,12 @@ app.get('/success',(req,res) =>{
       console.log(payment);
     }
   });
+
+  /* Delete all mysql users */
+  if (req.session.winner_picked) {
+    var deleted = await delete_users();
+  }
+  req.session.winner_picked = false;
   res.redirect('http://localhost:3000');
 });
 
@@ -132,9 +138,9 @@ app.get('/pick_winner', async(req, res)=>{
   list_of_participants.forEach(function (element) {
     email_array.push(element.email);
   });
-  var winner = email_array[Math.floor(Math.random()* email_array.length)];
-  console.log(winner);
-  return;
+  var winner_email = email_array[Math.floor(Math.random()* email_array.length)];
+  req.session.winner_picked = true;
+
   /* Create paypal payment to the winner */
   var create_payment_json = {
     "intent": "sale",
